@@ -80,8 +80,7 @@ if __name__ == '__main__':
     app = Pogom(__name__)
 
     if args.cors:
-        CORS(app);
-        app.config['CORS_HEADERS'] = 'Content-Type'
+        CORS(app, resources={r"/api/*": {"origins": "*"}})
 
     config['ROOT_PATH'] = app.root_path
     config['GMAPS_KEY'] = args.gmaps_key
