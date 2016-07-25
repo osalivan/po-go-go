@@ -79,8 +79,8 @@ if __name__ == '__main__':
 
     app = Pogom(__name__)
 
-    if args.cors:
-        CORS(app);
+    #if args.cors:
+    #    CORS(app);
 
     config['ROOT_PATH'] = app.root_path
     config['GMAPS_KEY'] = args.gmaps_key
