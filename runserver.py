@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
     if args.cors:
         CORS(app);
-    logging.getLogger('flask_cors').level = logging.DEBUG
+        app.config['CORS_HEADERS'] = 'Content-Type'
 
     config['ROOT_PATH'] = app.root_path
     config['GMAPS_KEY'] = args.gmaps_key
