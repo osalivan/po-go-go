@@ -2,22 +2,22 @@
 
 [Authentication]
 # ptc or google
-Service: google
-Username: prodota2skill@gmail.com
-Password: 069717174
+Service: ptc
+Username: 
+Password: 
 
 [Database]
 # Possible values: sqlite, mysql
-Type: mysql
+Type: sqlite
 # The following are only required if it's not sqlite
-Database_Name: mysqldb
-Database_User: osalivan
-Database_Pass: 069717174
-Database_Host: localhost
+Database_Name: 
+Database_User: 
+Database_Pass: 
+Database_Host: 
 
 [Search_Settings]
 Steps: 12
-Location: Paris
+Location: 
 #Time delay before beginning new scan
 Scan_delay: 1
 # Disable Map elements
@@ -27,6 +27,6 @@ disable_gyms: false
 
 [Misc]
 #you need a google maps api key to run this!
-Google_Maps_API_Key :AIzaSyDp73-LCTbzENndgXAKq7EGNQesiGJZVes
+Google_Maps_API_Key :
 Host: 127.0.0.1
 Port: 5000
