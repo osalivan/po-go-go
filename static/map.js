@@ -778,7 +778,7 @@ function processLuredPokemon(i, item) {
         disappear_time: item.lure_expiration
     };
 
-    if (item2.pokemon_id == null){
+    if (item2.pokemon_id == null) {
         return;
     if (map_data.lure_pokemons[item2.pokestop_id] == null && item2.lure_expiration) {
         //if (item.marker) item.marker.setMap(null);
