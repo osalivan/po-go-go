@@ -7,7 +7,7 @@ import logging
 import time
 
 from threading import Thread
-#from flask_cors import CORS, cross_origin
+from flask_cors import CORS, cross_origin
 
 from pogom import config
 from pogom.app import Pogom
@@ -79,8 +79,8 @@ if __name__ == '__main__':
 
     app = Pogom(__name__)
 
-    #if args.cors:
-    #    CORS(app);
+    if args.cors:
+        CORS(app);
 
     config['ROOT_PATH'] = app.root_path
     config['GMAPS_KEY'] = args.gmaps_key
