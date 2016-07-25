@@ -48,7 +48,7 @@ def get_args():
     parser.add_argument('-os', '--only-server', help='Server-Only Mode. Starts only the Webserver without the searcher.', action='store_true', default=False)
     parser.add_argument('-fl', '--fixed-location', help='Hides the search bar for use in shared maps.', action='store_true', default=False)
     parser.add_argument('-k', '--gmaps-key', help='Google Maps Javascript API Key', required=True)
-    #parser.add_argument('-C', '--cors', help='Enable CORS on web server', action='store_true', default=False)
+    parser.add_argument('-C', '--cors', help='Enable CORS on web server', action='store_true', default=False)
     parser.add_argument('-D', '--db', help='Database filename', default='pogom.db')
     parser.add_argument('-t', '--num-threads', help='Number of search threads', type=int, default=1)
     parser.add_argument('-np', '--no-pokemon', help='Disables Pokemon from the map (including parsing them into local db)', action='store_true', default=False)
@@ -60,7 +60,6 @@ def get_args():
     parser.add_argument('--db-pass', help='Password for the database')
     parser.add_argument('--db-host', help='IP or hostname for the database')
     parser.set_defaults(DEBUG=False)
-    parser.set_defaults(cors=False)
 
     args = parser.parse_args()
 
