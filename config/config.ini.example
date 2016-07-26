@@ -1,17 +1,17 @@
 # Authentication settings
-auth-service: google
-username: prodota2skill@gmail.com
-password: 069717174
+#auth-service:          # ptc (default) or google
+#username:
+#password:
 
 # Database settings
-db-type: mysql
-db-host: bvusxx6hk-mysql.services.clever-cloud.com:3306
-db-name: bvusxx6hk
-db-user: udx7qwzxrmmudmhk
-db-pass: ocYd2J1Mb7DpPM3hs2Y
+#db-type: sqlite        # sqlite (default) or mysql
+#db-host:               # required for mysql
+#db-name:               # required for mysql
+#db-user:               # required for mysql
+#db-pass:               # required for mysql
 
 # Search settings
-location: Paris
+#location: 
 #no-gyms:               # disables gym scanning (default false)
 #no-pokemon:            # disables pokemon scanning (default false)
 #no-pokestops:          # disables pokestop scanning (default false)
@@ -20,7 +20,7 @@ location: Paris
 #step-limit:            # default 12
 
 # Misc
-gmaps-key: AIzaSyDp73-LCTbzENndgXAKq7EGNQesiGJZVes
+#gmaps-key:
 
 # Webserver settings
 #host:                  # address to listen on (default 127.0.0.1)
