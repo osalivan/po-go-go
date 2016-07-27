@@ -1,27 +1,27 @@
 # Authentication settings
-auth-service: ptc
-username: osalivan
-password: 069717174
+#auth-service:          # ptc (default) or google
+#username:
+#password:
 
 # Database settings
-db-type: mysql
-db-host: boumzcz18-mysql.services.clever-cloud.com
-db-name: boumzcz18
-db-user: utfmn1twoqfexqoi
-db-pass: ZEXGax81gaCzmBEaB65
+#db-type: sqlite        # sqlite (default) or mysql
+#db-host:               # required for mysql
+#db-name:               # required for mysql
+#db-user:               # required for mysql
+#db-pass:               # required for mysql
 
 # Search settings
-location: Paris
+#location: 
 #no-gyms:               # disables gym scanning (default false)
 #no-pokemon:            # disables pokemon scanning (default false)
 #no-pokestops:          # disables pokestop scanning (default false)
 #num-threads:           # number of search threads (default 1)
-#scan-delay:            # default 1
+#scan-delay:            # default 5
 #step-limit:            # default 12
 
 # Misc
-gmaps-key: AIzaSyDp73-LCTbzENndgXAKq7EGNQesiGJZVes
+#gmaps-key:
 
 # Webserver settings
 #host:                  # address to listen on (default 127.0.0.1)
-port: 3306
+#port:                  # port to listen on (default 5000)
