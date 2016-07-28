@@ -49,6 +49,7 @@
       <header id="header">
         <a href="#nav">Options</a>
         <h1><a href="#">Po-Go.Online</a></h1>
+               <a href="#stats" id="statsToggle" class="statsNav" style="float: right;"></a>
       </header>
       <!-- NAV -->
       <nav id="nav">
@@ -129,6 +130,16 @@
           </div>
         </div>
         <div class="form-control switch-container">
+        	<h3>Statistics</h3>
+		<div class="onoffswitch">
+			<input id="stats-switch" type="checkbox" name="stats-switch" class="onoffswitch-checkbox" checked/>
+			<label class="onoffswitch-label" for="stats-switch">
+			<span class="switch-label" data-on="On" data-off="Off"></span>
+			<span class="switch-handle"></span>
+			</label>
+		 </div>
+	</div>
+        <div class="form-control switch-container">
           <h3>Icons</h3>
           <select name="pokemon-icons" id="pokemon-icons"></select>
         </div>
@@ -169,6 +180,22 @@
           </div>
         </div>
       </nav>
+      <nav id="stats">
+		<div class="switch-container">
+		  <div class="switch-container">
+			<center><h1 id="stats-pkmn-label"></h1></center>
+		  </div>
+		  <div id="pokemonList" style="color: black;"></div>
+		  <div class="switch-container">
+			<center><h1 id="stats-gym-label"></h1></center>
+		  </div>
+		  <div id="arenaList" style="color: black;"></div>
+		  <div class="switch-container">
+			<center><h1 id="stats-pkstop-label"></h1></center>
+		  </div>
+		  <div id="pokestopList" style="color: black;"></div>
+		</div>
+	</nav>
       <div id="map"></div>
       <div id="ads" style="position: absolute;bottom: 0px;width: 320px;height: 100px;left: 0;margin-left: auto;right: 0;margin-right: auto;z-index: 200;">
       	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -205,6 +232,7 @@
       var center_lng = {{lng}};
     </script>
     <script src="static/dist/js/map.js"></script>
+    <script src="static/dist/js/stats.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key={{ gmaps_key }}&amp;callback=initMap&amp;libraries=places,geometry"></script>
   </body>
 </html>
