@@ -13,7 +13,7 @@ from pogom import config
 from pogom.app import Pogom
 from pogom.utils import get_args, insert_mock_data
 from pogom.search import search_loop, create_search_threads, fake_search_loop
-from pogom.models import init_database, create_tables, Pokemon, Pokestop, Gym
+from pogom.models import init_database, Pokemon, Pokestop, Gym
 
 from pogom.pgoapi.utilities import get_pos_by_name
 
@@ -45,9 +45,6 @@ if __name__ == '__main__':
         logging.getLogger("pgoapi").setLevel(logging.DEBUG)
         logging.getLogger("rpc_api").setLevel(logging.DEBUG)
 
-    db = init_database()
-    create_tables(db)
-
     position = get_pos_by_name(args.location)
     if not any(position):
         log.error('Could not get a position by name, aborting.')
@@ -67,6 +64,9 @@ if __name__ == '__main__':
     config['LOCALE'] = args.locale
     config['CHINA'] = args.china
 
+    app = Pogom(__name__)
+    init_database(app)
+
     if not args.only_server:
         # Gather the pokemons!
         if not args.mock:
@@ -81,8 +81,6 @@ if __name__ == '__main__':
         search_thread.daemon = True
         search_thread.name = 'search_thread'
         search_thread.start()
-
-    app = Pogom(__name__)
 
     if args.cors:
         CORS(app);
